@@ -1,10 +1,11 @@
 package leetcode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 public class BinaryTreeInorderTraversal_94 {
-    public static class TreeNode {
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
