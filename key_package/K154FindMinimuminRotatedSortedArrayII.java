@@ -1,7 +1,7 @@
 package key_package;
 
 public class K154FindMinimuminRotatedSortedArrayII {
-    public int findMin(int[] nums) {
+    private int findMin(int[] nums) {
         int left = 0, right = nums.length - 1;
         return findMin(nums, left, right);
     }

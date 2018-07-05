@@ -73,13 +73,13 @@ public class Main {
         String lines[] = new String[n];
         for (int i = 0; i < n; i++)
             lines[i] = sc.nextLine();
-
         String value;
         for (String line : lines) {
             value = String.valueOf(cal(line));
             print(value, printFormat);
         }
     }
+
 
     private static void print(String value, String[][] printFormat) {
         StringBuffer sb[] = new StringBuffer[5];
@@ -107,14 +107,14 @@ public class Main {
         List<Character> f = new ArrayList();
         StringBuffer number = new StringBuffer();
         Long l;
-        for (int i = 0; i < line.length(); i++) {
+        for (int i = 0; i < line.length(); i++)
             if (line.charAt(i) >= '0' && line.charAt(i) <= '9') {
                 number.append(line.charAt(i));
             } else {// 遇到符号
                 l = Long.valueOf(number.toString());
                 number.setLength(0);
                 if (f.size() > 0 && f.get(f.size() - 1) == '*') {// 如果上一个符号是 *
-                                                                 // ,先计算上面两个值的乘积
+                    // ,先计算上面两个值的乘积
                     l = l * numbers.get(numbers.size() - 1);
                     numbers.remove(numbers.size() - 1);
                     f.remove(f.size() - 1);
@@ -122,11 +122,10 @@ public class Main {
                 numbers.add(l);
                 f.add(line.charAt(i));
             }
-        }
 
         // 计算倒数两个数字与一个符号的值
         l = Long.valueOf(number.toString());
-        if (f.get(f.size() - 1) == '*') {// 如果上一个符号是 * ,先计算上面两个值的乘积
+        if ('*' == f.get(f.size() - 1)) {// 如果上一个符号是 * ,先计算上面两个值的乘积
             l = l * numbers.get(numbers.size() - 1);
             numbers.remove(numbers.size() - 1);
             f.remove(f.size() - 1);

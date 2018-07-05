@@ -7,16 +7,6 @@ import java.util.Set;
  * 用集合优化，当集合长度大于k，移除集合中最前面的数
  **/
 public class K219ContainsDuplicateII {
-    // public boolean containsNearbyDuplicate(int[] nums, int k) {
-    // Map<Integer, Integer> position = new HashMap<>();
-    // int j;
-    // for (int i = 0; i < nums.length; i++) {
-    // j = position.getOrDefault(nums[i], -1);
-    // if (j != -1 && j - i <= k) { return true; }
-    // position.put(nums[i], i);
-    // }
-    // return false;
-    // }
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         if (nums == null || nums.length < 2) return false;
