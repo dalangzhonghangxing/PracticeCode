@@ -2,8 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8edba0c4-5f9d-4486-b03a-ebd95c4416fa" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/StaticClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TheadAndRunnable/ThreadLocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/EasySingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/SingleTon2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/动态代理模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/命令模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/模板方法模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/装饰者模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/观察者模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/迭代器模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/适配器模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desigin_pattern/静态代理模式测试.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/Pool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key_package/K19RemoveNthNodeFromEndofList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key_package/K22GenerateParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key_package/K242ValidAnagram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key_package/K44WildcardWatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/key_package/K75SortColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/AIOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/AIOServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/NioServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/Reactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socket/ServerSocketProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/丑数.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/删除链表中重复的结点.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/复杂链表的复制.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/字符串的排列.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/序列化二叉树.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/数组中的逆序对.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/最小的K个数.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/机器人的运动范围.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/树的子结构.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/正则表达式匹配.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/矩阵中的路径.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/翻转单词顺序列.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/链表中倒数第k个结点.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/链表中环的入口结点.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/顺时针打印矩阵.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheadAndRunnable/ConcurrentHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TheadAndRunnable/ConcurrentHashMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/BinaryTreeInorderTraversal_94.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/BinaryTreeInorderTraversal_94.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +66,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="15">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -83,6 +128,12 @@
               <item name="PracticeCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="PracticeCode" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PracticeCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PracticeCode" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="copyright" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,7 +260,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9443000" />
+    <option name="totallyTimeSpent" value="9497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1394" height="877" extended-state="0" />
@@ -425,8 +476,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="15">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
