@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -24,8 +26,7 @@ class LockRunnable implements Runnable {
             try {
                 lock.lock();
                 this.i++;
-            }
-            finally {
+            } finally {
                 lock.unlock();
             }
         }
@@ -50,12 +51,10 @@ class CASRunnable implements Runnable {
         try {
             s.acquire();
             System.out.println(c);
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             s.release();
         }
 
@@ -83,12 +82,10 @@ class SemaphoreRunnable implements Runnable {
             try {
                 as.acquire();
                 System.out.println(c);
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-            }
-            finally {
+            } finally {
                 rs.release();
             }
 
@@ -100,12 +97,24 @@ public class Main {
     final static int THREAD_NUMBER = 1000;
 
     public static void main(String[] args) {
-        Map<String, Object> target = new HashMap<>();;
-        copy(target);
-        System.out.println(target);
+        ExecutorService service = Executors.newScheduledThreadPool(2);
+        service.submit(new Runnable() {
+            @Override
+            public void run() {
+                Integer.parseInt("asdf");
+            }
+        });
+        service.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Integer.parseInt("111"));
+            }
+        });
+        service.shutdown();
+
     }
 
-    public static void copy(Map<String, Object> target){
+    public static void copy(Map<String, Object> target) {
         Map<String, Object> t = new HashMap<String, Object>();
         t.put("a", "a");
         target.put("a", "a");
