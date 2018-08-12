@@ -18,10 +18,10 @@ public class TopKFrequentElements_313 {
             }
         }
 
-        List<Map.Entry<Integer, Integer>> entries = new ArrayList<>();
+        List<Entry<Integer, Integer>> entries = new ArrayList<>();
         entries.addAll(counter.entrySet());
         Collections.sort(entries,
-                new Comparator<Map.Entry<Integer, Integer>>() {
+                new Comparator<Entry<Integer, Integer>>() {
 
                     @Override
                     public int compare(Entry<Integer, Integer> o1,

@@ -16,15 +16,26 @@ import net.sf.cglib.proxy.MethodProxy;
 public class 动态代理模式测试 {
     // ----------------------1. JDK的动态代理------------------------------//
     // 首先定义一个接口，供被代理类实现
-    static interface Action {
+    interface Action {
         void doSomething();
     }
 
     // 被代理类
     static class ActionImpl implements Action {
-        @Override
         public void doSomething() {
             System.out.println("I am doing something...");
+        }
+    }
+
+    static class ActionoProxyStatic implements Action {
+        Action target;
+
+        public ActionoProxyStatic(Action target) {
+            this.target = target;
+        }
+
+        public void doSomething() {
+            target.doSomething();
         }
     }
 
@@ -43,9 +54,8 @@ public class 动态代理模式测试 {
                     target.getClass().getClassLoader(), // 需要提供生成代理对象的ClassLoader，一般用target的ClassLoader
                     target.getClass().getInterfaces(), // 需要提供target的接口，因此target一定要实现某个接口
                     new InvocationHandler() {// 这里是核心——代理方法，通过这个方法实现代理
-                        @Override
                         public Object invoke(Object proxy, Method method,
-                                Object[] args) throws Throwable {
+                                             Object[] args) throws Throwable {
                             System.out.println("before doing something");
 
                             // 通过反射来调用代理方法
@@ -95,9 +105,8 @@ public class 动态代理模式测试 {
         }
 
         // 通过这个方法来实现代理，这个方法与JDK动态代理的InvocationHandler.invoke一模一样
-        @Override
         public Object intercept(Object obj, Method method, Object[] args,
-                MethodProxy proxy) throws Throwable {
+                                MethodProxy proxy) throws Throwable {
             System.out.println("before doing something");
 
             // 通过反射来调用代理方法
