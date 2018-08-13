@@ -1,27 +1,40 @@
 package 剑指offer;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static java.lang.System.out;
+
 public class 丑数 {
+
+    public int min(int a, int b, int c) {
+        int min = Math.min(a, b);
+        return Math.min(min, c);
+    }
+
     public int GetUglyNumber_Solution(int index) {
         if (index < 7) return index;
-        int[] records = new int[index];
-        int x = 0, y = 0, z = 0, k = 1, min;
-        records[0] = 1;
-        while (index > 1) {
-            min = Math.min(Math.min(records[x] * 2, records[y] * 3), records[z] * 5);
-            records[k++] = min;
-            if (min == records[x] * 2)
-                x++;
-            if (min == records[y] * 3)
-                y++;
-            if (min == records[z] * 5)
-                z++;
-            index--;
+        List<Integer> list = new ArrayList<>(index);
+        for (int i = 1; i <= 6; i++)
+            list.add(i);
+        int two = 3, three = 2, five = 1, c = 7;
+        while (c <= index) {
+            int m = min(list.get(two) * 2, list.get(three) * 3, list.get(five) * 5);
+            list.add(m);
+            if (list.get(two) * 2 <= m)
+                two++;
+            if (list.get(three) * 3 <= m)
+                three++;
+            if (list.get(five) * 5 <= m)
+                five++;
+            c++;
         }
-        return records[records.length - 1];
+        return list.get(index - 1);
     }
 
     public static void main(String[] args) {
-        new 丑数().GetUglyNumber_Solution(10);
+        out.println(new 丑数().GetUglyNumber_Solution(10));
 
     }
 }

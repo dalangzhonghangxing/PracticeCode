@@ -1,34 +1,28 @@
 import java.util.*;
 
+import static java.lang.System.out;
+
 public class Main {
+
+    static class Student {
+        String sno;
+        String name;
+
+        @Override
+        public int hashCode() {
+            return sno.hashCode();
+        }
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        List<String> ans = qpl(m, n);
-        Collections.sort(ans);
-        if (k > ans.size()) {
-            System.out.println(-1);
-        } else {
-            System.out.println(ans.get(k - 1));
-        }
+        Set<Student> s = new HashSet<>();
+        Student student = new Student();
+        student.sno = "1";
+        student.name = "1";
+        s.add(student);
+        student.sno = "2";
+        s.add(student);
+        out.println(s.size());
     }
 
-    public static List<String> qpl(int m, int n) {
-        List<String> ans = new ArrayList<>();
-        getqpl(m, n, "", ans);
-        return ans;
-    }
-
-    public static void getqpl(int l, int r, String str, List<String> ans) {
-        if (l < 0 || r < 0)
-            return;
-        if (l == 0 && r == 0) {
-            ans.add(str);
-            str = "";
-        }
-        getqpl(l - 1, r, str + "a", ans);
-        getqpl(l, r - 1, str + "z", ans);
-    }
 }
