@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 
 import static java.lang.System.out;
@@ -15,14 +16,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Set<Student> s = new HashSet<>();
-        Student student = new Student();
-        student.sno = "1";
-        student.name = "1";
-        s.add(student);
-        student.sno = "2";
-        s.add(student);
-        out.println(s.size());
+        try {
+            new ObjectInputStream(new FileInputStream("sadf"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
